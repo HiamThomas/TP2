@@ -7,6 +7,9 @@ namespace TP2
     {
         public static string Chiffrer(string text, string alphabet)
         {
+            if (alphabet.Length == 0)
+                return "Alphabet can't be empty";
+            
             char[] charArray = alphabet.ToUpper().ToCharArray();
             Array.Reverse(charArray);
             string alphabetReverse = new string(charArray);
@@ -28,6 +31,9 @@ namespace TP2
 
         public static string Dechiffrer(string text, string alphabet)
         {
+            if (alphabet.Length == 0)
+                return "Alphabet can't be empty";
+            
             char[] charArray = alphabet.ToUpper().ToCharArray();
             Array.Reverse(charArray);
             string alphabetReverse = new string(charArray);

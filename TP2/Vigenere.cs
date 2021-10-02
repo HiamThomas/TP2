@@ -4,6 +4,9 @@
     {
         public static string run(string input, string key, bool cipher)
         {
+            if (key.Length == 0)
+                return "Key can't be empty";
+            
             string output = "";
             int notALetter = 0;
             for (int i = 0; i < input.Length; ++i)

@@ -7,6 +7,9 @@ namespace TP2
     {
         public static string Chiffrer(string text, string alphabet, string decalageText)
         {
+            if (alphabet.Length == 0)
+                return "Alphabet can't be empty";
+            
             int decalage;
             try
             {
@@ -39,6 +42,9 @@ namespace TP2
 
         public static string Dechiffrer(string text, string alphabet, string decalageText)
         {
+            if (alphabet.Length == 0)
+                return "Alphabet can't be empty";
+            
             int decalage;
             try
             {
