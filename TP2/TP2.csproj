@@ -32,6 +32,7 @@
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+        <ApplicationIcon>TP2Icon.ico</ApplicationIcon>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
