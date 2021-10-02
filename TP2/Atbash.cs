@@ -9,7 +9,7 @@ namespace TP2
         {
             if (alphabet.Length == 0)
                 return "Alphabet can't be empty";
-            
+
             char[] charArray = alphabet.ToUpper().ToCharArray();
             Array.Reverse(charArray);
             string alphabetReverse = new string(charArray);
@@ -33,7 +33,7 @@ namespace TP2
         {
             if (alphabet.Length == 0)
                 return "Alphabet can't be empty";
-            
+
             char[] charArray = alphabet.ToUpper().ToCharArray();
             Array.Reverse(charArray);
             string alphabetReverse = new string(charArray);

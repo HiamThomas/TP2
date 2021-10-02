@@ -9,7 +9,7 @@ namespace TP2
         {
             if (alphabet.Length == 0)
                 return "Alphabet can't be empty";
-            
+
             int decalage;
             try
             {
@@ -44,7 +44,7 @@ namespace TP2
         {
             if (alphabet.Length == 0)
                 return "Alphabet can't be empty";
-            
+
             int decalage;
             try
             {

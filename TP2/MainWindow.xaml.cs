@@ -15,22 +15,6 @@ namespace TP2
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged_Output(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void TextBox_TextChanged_Input(object sender, TextChangedEventArgs e)
-        {
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void ComboBoxClick(object sender, SelectionChangedEventArgs e)
         {
             switch (comboBox.SelectedItem.ToString().Split(new string[] {": "}, StringSplitOptions.None).Last())
@@ -89,10 +73,6 @@ namespace TP2
                         textOutput.Text = Atbash.Chiffrer(textInput.Text, keyAtbashAlphabet.Text);
                     break;
             }
-        }
-
-        private void ButtonChoiceCode(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

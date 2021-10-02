@@ -11,31 +11,31 @@
         <Grid Background="#FF2D2D30">
 
             <TextBox x:Name="keyCesarAlphabet" HorizontalAlignment="Left" Margin="264,359,0,0" TextWrapping="Wrap"
-                     VerticalAlignment="Top" Width="274" TextChanged="TextBox_TextChanged_Output" Height="20"
+                     VerticalAlignment="Top" Width="274" Height="20"
                      Background="#FF222425" Foreground="#FFBAB5AE" />
             <TextBox x:Name="keyCesarDecalage" HorizontalAlignment="Left" Margin="154,360,0,0" TextWrapping="Wrap"
-                VerticalAlignment="Top" Width="88" TextChanged="TextBox_TextChanged_Output" Height="20"
-                Background="#FF222425" Foreground="#FFBAB5AE" />
+                     VerticalAlignment="Top" Width="88" Height="20"
+                     Background="#FF222425" Foreground="#FFBAB5AE" />
             <TextBox x:Name="keyVigenere" HorizontalAlignment="Left" Margin="154,360,0,0" TextWrapping="Wrap"
-                VerticalAlignment="Top" Width="88" TextChanged="TextBox_TextChanged_Output" Height="20"
-                Background="#FF222425" Foreground="#FFBAB5AE" />
+                     VerticalAlignment="Top" Width="88" Height="20"
+                     Background="#FF222425" Foreground="#FFBAB5AE" />
             <TextBox x:Name="keyAtbashAlphabet" HorizontalAlignment="Left" Margin="154,360,0,0" TextWrapping="Wrap"
-                     VerticalAlignment="Top" Width="274" TextChanged="TextBox_TextChanged_Output" Height="20"
+                     VerticalAlignment="Top" Width="274" Height="20"
                      Background="#FF222425" Foreground="#FFBAB5AE" />
 
             <Button x:Name="runButton" Content="Run" HorizontalAlignment="Left" Margin="356,393,0,0"
                     VerticalAlignment="Top" Height="32" Width="90" RenderTransformOrigin="0.5,0.5"
                     Background="#FFE2E0DD" Click="ButtonRun" />
             <TextBox x:Name="textOutput" HorizontalAlignment="Left" Margin="410,45,0,0" TextWrapping="Wrap"
-                     VerticalAlignment="Top" Width="350" TextChanged="TextBox_TextChanged_Output" Height="300"
+                     VerticalAlignment="Top" Width="350" Height="300"
                      Background="#FF222425" Foreground="#FFBAB5AE" AcceptsReturn="True" />
             <TextBox x:Name="textInput" HorizontalAlignment="Left" Margin="40,45,0,0" TextWrapping="Wrap"
-                     VerticalAlignment="Top" Width="350" TextChanged="TextBox_TextChanged_Input" Height="300"
+                     VerticalAlignment="Top" Width="350" Height="300"
                      Background="#FF222425" Foreground="#FFBAB5AE" AcceptsReturn="True" />
             <Grid />
             <CheckBox x:Name="checkBox" Content="Decode" HorizontalAlignment="Left" Margin="244,401,0,0"
                       VerticalAlignment="Top" Foreground="#FFBAB5AE" RenderTransformOrigin="0.429,1.923"
-                      Background="#FFBAB5AE" Click="ButtonChoiceCode" />
+                      Background="#FFBAB5AE" />
             <TextBlock HorizontalAlignment="Left" Height="23" Margin="40,16,0,0" TextWrapping="Wrap"
                        VerticalAlignment="Top" Width="350" FontSize="18" FontWeight="Bold" TextAlignment="Center"
                        Foreground="#FFBAB5AE">
