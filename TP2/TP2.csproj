@@ -58,9 +58,9 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </Page>
-        <Compile Include="Algo1.cs" />
-        <Compile Include="Algo2.cs" />
-        <Compile Include="Algo3.cs" />
+        <Compile Include="Vigenere.cs" />
+        <Compile Include="Cesar.cs" />
+        <Compile Include="Atbash.cs" />
         <Compile Include="App.xaml.cs">
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>

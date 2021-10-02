@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace TP2
@@ -12,24 +14,52 @@ namespace TP2
         {
             InitializeComponent();
         }
-        
+
         private void TextBox_TextChanged_Output(object sender, TextChangedEventArgs e)
         {
-            
         }
+
         private void TextBox_TextChanged_Input(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
         {
+        }
 
+        private void ComboBoxClick(object sender, SelectionChangedEventArgs e)
+        {
+            switch (comboBox.SelectedItem.ToString().Split(new string[] {": "}, StringSplitOptions.None).Last())
+            {
+                case "Vigenere":
+                    keyCesarDecalage.Visibility = Visibility.Hidden;
+                    keyCesarAlphabet.Visibility = Visibility.Hidden;
+                    keyAtbashAlphabet.Visibility = Visibility.Hidden;
+                    keyVigenere.Visibility = Visibility.Visible;
+                    keyVigenere.Text = "key";
+                    break;
+
+                case "Cesar":
+                    keyCesarDecalage.Visibility = Visibility.Visible;
+                    keyCesarAlphabet.Visibility = Visibility.Visible;
+                    keyVigenere.Visibility = Visibility.Hidden;
+                    keyAtbashAlphabet.Visibility = Visibility.Hidden;
+                    keyCesarAlphabet.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    keyCesarDecalage.Text = "3";
+                    break;
+
+                case "Atbash":
+                    keyCesarDecalage.Visibility = Visibility.Hidden;
+                    keyCesarAlphabet.Visibility = Visibility.Hidden;
+                    keyVigenere.Visibility = Visibility.Hidden;
+                    keyAtbashAlphabet.Visibility = Visibility.Visible;
+                    keyAtbashAlphabet.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    break;
+            }
         }
 
         private void ButtonRun(object sender, RoutedEventArgs e)
@@ -38,30 +68,31 @@ namespace TP2
             {
                 case "Vigenere":
                     if (checkBox.IsChecked == true)
-                        textOutput.Text = Algo1.Vigenere(textInput.Text, key.Text,false);
+                        textOutput.Text = Vigenere.run(textInput.Text, keyVigenere.Text, false);
                     else
-                        textOutput.Text = Algo1.Vigenere(textInput.Text, key.Text,true);
-                    break;
-                
-                case "Algo 2":
-                    if (checkBox.IsChecked == true)
-                        textOutput.Text = Algo2.Decrypte(textInput.Text);
-                    else
-                        textOutput.Text = Algo2.Encrypte(textInput.Text);
+                        textOutput.Text = Vigenere.run(textInput.Text, keyVigenere.Text, true);
                     break;
 
-                case "Algo 3":
+                case "Cesar":
                     if (checkBox.IsChecked == true)
-                        textOutput.Text = Algo3.Decrypte(textInput.Text);
+                        textOutput.Text = Cesar.Dechiffrer(textInput.Text, keyCesarAlphabet.Text,
+                            keyCesarDecalage.Text);
                     else
-                        textOutput.Text = Algo3.Encrypte(textInput.Text);
+                        textOutput.Text = Cesar.Chiffrer(textInput.Text, keyCesarAlphabet.Text,
+                            keyCesarDecalage.Text);
+                    break;
+
+                case "Atbash":
+                    if (checkBox.IsChecked == true)
+                        textOutput.Text = Atbash.Dechiffrer(textInput.Text, keyAtbashAlphabet.Text);
+                    else
+                        textOutput.Text = Atbash.Chiffrer(textInput.Text, keyAtbashAlphabet.Text);
                     break;
             }
         }
 
         private void ButtonChoiceCode(object sender, RoutedEventArgs e)
         {
-            
         }
     }
 }
